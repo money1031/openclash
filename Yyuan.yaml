@@ -1,516 +1,12 @@
----
-mixed-port: 7890
-allow-lan: true
-bind-address: "*"
-mode: rule
-log-level: info
-external-controller: 127.0.0.1:9090
-dns:
-  enable: false
-  ipv6: false
-  default-nameserver:
-  - 223.5.5.5
-  - 119.29.29.29
-  fake-ip-range: 198.18.0.1/16
-  use-hosts: true
-  nameserver:
-  - https://doh.pub/dns-query
-  - https://dns.alidns.com/dns-query
-  fallback:
-  - https://doh.dns.sb/dns-query
-  - https://dns.cloudflare.com/dns-query
-  - https://dns.twnic.tw/dns-query
-  - tls://8.8.4.4:853
-  fallback-filter:
-    geoip: true
-    ipcidr:
-    - 240.0.0.0/4
-    - 0.0.0.0/32
-proxies:
-- name: 邀请新用户60%返利
-  type: vmess
-  server: default.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn1.10392.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 一元.com
-  type: vmess
-  server: 104.26.4.93
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn2.10392.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: yiyuanjichang.com
-  type: vmess
-  server: 104.26.5.93
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn2.10392.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 香港 01 | 专线
-  type: vmess
-  server: hk01.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 香港 02 | 专线
-  type: vmess
-  server: hk02.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 香港 03 | 专线
-  type: vmess
-  server: hk03.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 香港 04 | 专线
-  type: vmess
-  server: hk04.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 香港 05 | 专线
-  type: vmess
-  server: hk05.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 香港 06 | 专线
-  type: vmess
-  server: hk06.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 美国 01 | 专线
-  type: vmess
-  server: 104.16.132.167
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn1.10392.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 美国 02 | 专线
-  type: vmess
-  server: 172.64.166.58
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn1.10392.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 美国 03 | 专线
-  type: vmess
-  server: 104.17.126.27
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn1.10392.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 美国 04 | 专线
-  type: vmess
-  server: 104.18.15.147
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn2.10392.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 美国 05 | 专线
-  type: vmess
-  server: 172.67.73.22
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn2.10392.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 美国 06 | 专线
-  type: vmess
-  server: 104.17.233.82
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn2.10392.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 英国 01 | 专线
-  type: vmess
-  server: 172.67.69.246
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn.312902.com
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 英国 02 | 专线
-  type: vmess
-  server: 104.26.11.133
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn.312902.com
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 英国 03 | 专线
-  type: vmess
-  server: 104.26.10.133
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn.312902.com
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 新加坡 01 | 专线
-  type: vmess
-  server: sg01.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 新加坡 02 | 专线
-  type: vmess
-  server: sg02.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 新加坡 03 | 专线
-  type: vmess
-  server: sg03.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 新加坡 04 | 专线
-  type: vmess
-  server: sg04.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 新加坡 05 | 专线
-  type: vmess
-  server: sg05.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 日本 01 | 专线
-  type: vmess
-  server: jp01.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 日本 02 | 专线
-  type: vmess
-  server: jp02.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-- name: 日本 03 | 专线
-  type: vmess
-  server: jp03.84d4d2ae-211c-475f-9076-35fdd96d779b.940a60a7-6cb5-4fa7-bd73-23230d77aa0e.yiyuanjichang.org
-  port: 443
-  uuid: 45d78926-0727-480a-a4aa-f5735ad67ade
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.12306.cn
-  network: grpc
-  grpc-opts:
-    grpc-service-name: '12306'
-proxy-groups:
-- name: 一元机场
-  type: select
-  proxies:
-  - 自动选择
-  - 故障转移
-  - 邀请新用户60%返利
-  - 一元.com
-  - yiyuanjichang.com
-  - 香港 01 | 专线
-  - 香港 02 | 专线
-  - 香港 03 | 专线
-  - 香港 04 | 专线
-  - 香港 05 | 专线
-  - 香港 06 | 专线
-  - 美国 01 | 专线
-  - 美国 02 | 专线
-  - 美国 03 | 专线
-  - 美国 04 | 专线
-  - 美国 05 | 专线
-  - 美国 06 | 专线
-  - 英国 01 | 专线
-  - 英国 02 | 专线
-  - 英国 03 | 专线
-  - 新加坡 01 | 专线
-  - 新加坡 02 | 专线
-  - 新加坡 03 | 专线
-  - 新加坡 04 | 专线
-  - 新加坡 05 | 专线
-  - 日本 01 | 专线
-  - 日本 02 | 专线
-  - 日本 03 | 专线
-- name: 自动选择
-  type: url-test
-  proxies:
-  - 邀请新用户60%返利
-  - 一元.com
-  - yiyuanjichang.com
-  - 香港 01 | 专线
-  - 香港 02 | 专线
-  - 香港 03 | 专线
-  - 香港 04 | 专线
-  - 香港 05 | 专线
-  - 香港 06 | 专线
-  - 美国 01 | 专线
-  - 美国 02 | 专线
-  - 美国 03 | 专线
-  - 美国 04 | 专线
-  - 美国 05 | 专线
-  - 美国 06 | 专线
-  - 英国 01 | 专线
-  - 英国 02 | 专线
-  - 英国 03 | 专线
-  - 新加坡 01 | 专线
-  - 新加坡 02 | 专线
-  - 新加坡 03 | 专线
-  - 新加坡 04 | 专线
-  - 新加坡 05 | 专线
-  - 日本 01 | 专线
-  - 日本 02 | 专线
-  - 日本 03 | 专线
-  url: http://www.gstatic.com/generate_204
-  interval: 86400
-- name: 故障转移
-  type: fallback
-  proxies:
-  - 邀请新用户60%返利
-  - 一元.com
-  - yiyuanjichang.com
-  - 香港 01 | 专线
-  - 香港 02 | 专线
-  - 香港 03 | 专线
-  - 香港 04 | 专线
-  - 香港 05 | 专线
-  - 香港 06 | 专线
-  - 美国 01 | 专线
-  - 美国 02 | 专线
-  - 美国 03 | 专线
-  - 美国 04 | 专线
-  - 美国 05 | 专线
-  - 美国 06 | 专线
-  - 英国 01 | 专线
-  - 英国 02 | 专线
-  - 英国 03 | 专线
-  - 新加坡 01 | 专线
-  - 新加坡 02 | 专线
-  - 新加坡 03 | 专线
-  - 新加坡 04 | 专线
-  - 新加坡 05 | 专线
-  - 日本 01 | 专线
-  - 日本 02 | 专线
-  - 日本 03 | 专线
-  url: http://www.gstatic.com/generate_204
-  interval: 7200
 rules:
-- DOMAIN-KEYWORD,upai,DIRECT
+
 - DOMAIN-KEYWORD,cdn,DIRECT
-- DOMAIN,myip.ipip.net,一元机场
+- DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
+- DOMAIN,safebrowsing.googleapis.com,DIRECT
 - DOMAIN,m.rr.tv,DIRECT
 - DOMAIN,www.kkwan.top,DIRECT
 - DOMAIN,www.tvyb03.com,DIRECT
 - DOMAIN,s1.byte11.com,DIRECT
-- DOMAIN-SUFFIX,services.googleapis.cn,一元机场
-- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,一元机场
-- DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
-- DOMAIN,safebrowsing.googleapis.com,DIRECT
-- DOMAIN,developer.apple.com,一元机场
-- DOMAIN-SUFFIX,digicert.com,一元机场
-- DOMAIN,ocsp.apple.com,一元机场
-- DOMAIN,ocsp.comodoca.com,一元机场
-- DOMAIN,ocsp.usertrust.com,一元机场
-- DOMAIN,ocsp.sectigo.com,一元机场
-- DOMAIN,ocsp.verisign.net,一元机场
-- DOMAIN-SUFFIX,apple-dns.net,一元机场
-- DOMAIN,testflight.apple.com,一元机场
-- DOMAIN,sandbox.itunes.apple.com,一元机场
-- DOMAIN,itunes.apple.com,一元机场
-- DOMAIN-SUFFIX,apps.apple.com,一元机场
-- DOMAIN-SUFFIX,blobstore.apple.com,一元机场
-- DOMAIN,cvws.icloud-content.com,一元机场
 - DOMAIN-SUFFIX,mzstatic.com,DIRECT
 - DOMAIN-SUFFIX,itunes.apple.com,DIRECT
 - DOMAIN-SUFFIX,icloud.com,DIRECT
@@ -652,6 +148,40 @@ rules:
 - DOMAIN-SUFFIX,zhimg.com,DIRECT
 - DOMAIN-SUFFIX,zimuzu.tv,DIRECT
 - DOMAIN-SUFFIX,zoho.com,DIRECT
+- DOMAIN,injections.adguard.org,DIRECT
+- DOMAIN,local.adguard.org,DIRECT
+- DOMAIN-SUFFIX,local,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,17.0.0.0/8,DIRECT
+- IP-CIDR,100.64.0.0/10,DIRECT
+- IP-CIDR,224.0.0.0/4,DIRECT
+- IP-CIDR6,fe80::/10,DIRECT
+- DOMAIN-SUFFIX,cn,DIRECT
+- DOMAIN-KEYWORD,-cn,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,一元机场
+
+- DOMAIN-KEYWORD,upai,一元机场
+- DOMAIN,myip.ipip.net,一元机场
+- DOMAIN-SUFFIX,services.googleapis.cn,一元机场
+- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,一元机场
+- DOMAIN,developer.apple.com,一元机场
+- DOMAIN-SUFFIX,digicert.com,一元机场
+- DOMAIN,ocsp.apple.com,一元机场
+- DOMAIN,ocsp.comodoca.com,一元机场
+- DOMAIN,ocsp.usertrust.com,一元机场
+- DOMAIN,ocsp.sectigo.com,一元机场
+- DOMAIN,ocsp.verisign.net,一元机场
+- DOMAIN-SUFFIX,apple-dns.net,一元机场
+- DOMAIN,testflight.apple.com,一元机场
+- DOMAIN,sandbox.itunes.apple.com,一元机场
+- DOMAIN,itunes.apple.com,一元机场
+- DOMAIN-SUFFIX,apps.apple.com,一元机场
+- DOMAIN-SUFFIX,blobstore.apple.com,一元机场
+- DOMAIN,cvws.icloud-content.com,一元机场
 - DOMAIN-KEYWORD,amazon,一元机场
 - DOMAIN-KEYWORD,google,一元机场
 - DOMAIN-KEYWORD,gmail,一元机场
@@ -666,33 +196,6 @@ rules:
 - DOMAIN-KEYWORD,blogspot,一元机场
 - DOMAIN-SUFFIX,youtu.be,一元机场
 - DOMAIN-KEYWORD,whatsapp,一元机场
-- DOMAIN-KEYWORD,admarvel,REJECT
-- DOMAIN-KEYWORD,admaster,REJECT
-- DOMAIN-KEYWORD,adsage,REJECT
-- DOMAIN-KEYWORD,adsmogo,REJECT
-- DOMAIN-KEYWORD,adsrvmedia,REJECT
-- DOMAIN-KEYWORD,adwords,REJECT
-- DOMAIN-KEYWORD,adservice,REJECT
-- DOMAIN-SUFFIX,appsflyer.com,REJECT
-- DOMAIN-KEYWORD,domob,REJECT
-- DOMAIN-SUFFIX,doubleclick.net,REJECT
-- DOMAIN-KEYWORD,duomeng,REJECT
-- DOMAIN-KEYWORD,dwtrack,REJECT
-- DOMAIN-KEYWORD,guanggao,REJECT
-- DOMAIN-KEYWORD,lianmeng,REJECT
-- DOMAIN-SUFFIX,mmstat.com,REJECT
-- DOMAIN-KEYWORD,mopub,REJECT
-- DOMAIN-KEYWORD,omgmta,REJECT
-- DOMAIN-KEYWORD,openx,REJECT
-- DOMAIN-KEYWORD,partnerad,REJECT
-- DOMAIN-KEYWORD,pingfore,REJECT
-- DOMAIN-KEYWORD,supersonicads,REJECT
-- DOMAIN-KEYWORD,uedas,REJECT
-- DOMAIN-KEYWORD,umeng,REJECT
-- DOMAIN-KEYWORD,usage,REJECT
-- DOMAIN-SUFFIX,vungle.com,REJECT
-- DOMAIN-KEYWORD,wlmonitor,REJECT
-- DOMAIN-KEYWORD,zjtoolbar,REJECT
 - DOMAIN-SUFFIX,9to5mac.com,一元机场
 - DOMAIN-SUFFIX,abpchina.org,一元机场
 - DOMAIN-SUFFIX,adblockplus.org,一元机场
@@ -991,18 +494,33 @@ rules:
 - IP-CIDR,220.181.174.162/32,一元机场,no-resolve
 - IP-CIDR,220.181.174.226/32,一元机场,no-resolve
 - IP-CIDR,220.181.174.34/32,一元机场,no-resolve
-- DOMAIN,injections.adguard.org,DIRECT
-- DOMAIN,local.adguard.org,DIRECT
-- DOMAIN-SUFFIX,local,DIRECT
-- IP-CIDR,127.0.0.0/8,DIRECT
-- IP-CIDR,172.16.0.0/12,DIRECT
-- IP-CIDR,192.168.0.0/16,DIRECT
-- IP-CIDR,10.0.0.0/8,DIRECT
-- IP-CIDR,17.0.0.0/8,DIRECT
-- IP-CIDR,100.64.0.0/10,DIRECT
-- IP-CIDR,224.0.0.0/4,DIRECT
-- IP-CIDR6,fe80::/10,DIRECT
-- DOMAIN-SUFFIX,cn,DIRECT
-- DOMAIN-KEYWORD,-cn,DIRECT
-- GEOIP,CN,DIRECT
-- MATCH,一元机场
+
+
+
+- DOMAIN-KEYWORD,admarvel,REJECT
+- DOMAIN-KEYWORD,admaster,REJECT
+- DOMAIN-KEYWORD,adsage,REJECT
+- DOMAIN-KEYWORD,adsmogo,REJECT
+- DOMAIN-KEYWORD,adsrvmedia,REJECT
+- DOMAIN-KEYWORD,adwords,REJECT
+- DOMAIN-KEYWORD,adservice,REJECT
+- DOMAIN-SUFFIX,appsflyer.com,REJECT
+- DOMAIN-KEYWORD,domob,REJECT
+- DOMAIN-SUFFIX,doubleclick.net,REJECT
+- DOMAIN-KEYWORD,duomeng,REJECT
+- DOMAIN-KEYWORD,dwtrack,REJECT
+- DOMAIN-KEYWORD,guanggao,REJECT
+- DOMAIN-KEYWORD,lianmeng,REJECT
+- DOMAIN-SUFFIX,mmstat.com,REJECT
+- DOMAIN-KEYWORD,mopub,REJECT
+- DOMAIN-KEYWORD,omgmta,REJECT
+- DOMAIN-KEYWORD,openx,REJECT
+- DOMAIN-KEYWORD,partnerad,REJECT
+- DOMAIN-KEYWORD,pingfore,REJECT
+- DOMAIN-KEYWORD,supersonicads,REJECT
+- DOMAIN-KEYWORD,uedas,REJECT
+- DOMAIN-KEYWORD,umeng,REJECT
+- DOMAIN-KEYWORD,usage,REJECT
+- DOMAIN-SUFFIX,vungle.com,REJECT
+- DOMAIN-KEYWORD,wlmonitor,REJECT
+- DOMAIN-KEYWORD,zjtoolbar,REJECT
