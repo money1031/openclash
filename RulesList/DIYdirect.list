@@ -5,6 +5,7 @@ DOMAIN-KEYWORD,tvyb02
 DOMAIN-KEYWORD,tvyb03
 DOMAIN-KEYWORD,kkwan
 DOMAIN-KEYWORD,pcdn
+DOMAIN-KEYWORD,ncat*
 
 # 域名后缀匹配
 DOMAIN-SUFFIX,tvyb01.com
@@ -13,6 +14,7 @@ DOMAIN-SUFFIX,tvyb03.com
 DOMAIN-SUFFIX,kkwan.top
 DOMAIN-SUFFIX,bb83e.com
 DOMAIN-SUFFIX,sjd45.com
+DOMAIN-SUFFIX,ncat4.com
 
 #全域名匹配
 DOMAIN,www.tvyb01.com
@@ -23,3 +25,4 @@ DOMAIN,m.rr.tv
 DOMAIN,www.bb83e.com
 DOMAIN,www.sjd45.com
 DOMAIN,tagss04.pro
+DOMAIN,www.ncat4.com
