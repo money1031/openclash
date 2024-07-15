@@ -1,0 +1,16 @@
+# 内容：自定义国内直连地址
+# 域名关键字匹配
+DOMAIN-KEYWORD,ipip
+DOMAIN-KEYWORD,ipleak
+DOMAIN-KEYWORD,ipcheck
+DOMAIN-KEYWORD,upai
+
+# 域名后缀匹配
+DOMAIN-SUFFIX,ipip.net
+DOMAIN-SUFFIX,ipleak.net
+DOMAIN-SUFFIX,ipcheck.ing
+
+#全域名匹配
+DOMAIN,myip.ipip.net
+DOMAIN,ipcheck.ing
+DOMAIN,ipleak.net
