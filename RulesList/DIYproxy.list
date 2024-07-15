@@ -9,8 +9,10 @@ DOMAIN-KEYWORD,upai
 DOMAIN-SUFFIX,ipip.net
 DOMAIN-SUFFIX,ipleak.net
 DOMAIN-SUFFIX,ipcheck.ing
+DOMAIN-SUFFIX,ipify.org
 
 #全域名匹配
 DOMAIN,myip.ipip.net
 DOMAIN,ipcheck.ing
 DOMAIN,ipleak.net
+DOMAIN,api.ipify.org
