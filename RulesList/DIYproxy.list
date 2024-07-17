@@ -14,9 +14,8 @@ DOMAIN-SUFFIX,ipify.org
 # 全域名匹配
 DOMAIN,myip.ipip.net
 DOMAIN,one.one.one.one
-DOMAIN,1.1.1.1
-DOMAIN,1.0.0.1
+
 
 # ip段匹配
-IP-CIDR,1.0.0.1/24,no-resolve
-IP-CIDR,1.1.1.1/24,no-resolve
+IP-CIDR,1.0.0.1
+IP-CIDR,1.1.1.1
