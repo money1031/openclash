@@ -15,14 +15,7 @@ DOMAIN-SUFFIX,kkwan.top
 DOMAIN-SUFFIX,8c0bd2d20159.com
 DOMAIN-SUFFIX,91jq7.jqjq325.xyz
 DOMAIN-SUFFIX,sjd45.com
-DOMAIN-SUFFIX,ncat4.com
 
-#全域名匹配
-DOMAIN,www.tvyb01.com
-DOMAIN,www.tvyb02.com
-DOMAIN,www.tvyb03.com
-DOMAIN,www.kkwan.top
-DOMAIN,www.ncat4.com
-DOMAIN,www.bb83e.com
-DOMAIN,www.sjd45.com
+
+# 全域名匹配
 DOMAIN,tagss04.pro
