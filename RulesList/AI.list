@@ -8,7 +8,7 @@
 # IP-ASN: 1
 # IP-CIDR: 2
 # TOTAL: 36
-DOMAIN,static.nvidiagrid.net
+DOMAIN,www.ipaddress.my
 DOMAIN,browser-intake-datadoghq.com
 DOMAIN,chat.openai.com.cdn.cloudflare.net
 DOMAIN,gemini.google.com
