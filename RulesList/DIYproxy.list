@@ -5,6 +5,7 @@ DOMAIN-KEYWORD,ipleak
 DOMAIN-KEYWORD,ipcheck
 DOMAIN-KEYWORD,upai
 DOMAIN-KEYWORD,cloudflare
+DOMAIN-KEYWORD,qualified
 
 # 域名后缀匹配
 DOMAIN-SUFFIX,ipip.net
