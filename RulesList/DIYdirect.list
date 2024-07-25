@@ -19,3 +19,6 @@ DOMAIN-SUFFIX,sjd45.com
 
 # 全域名匹配
 DOMAIN,tagss04.pro
+DOMAIN,ocsp.sectigo.com
+DOMAIN,ocsp.usertrust.com
+DOMAIN,crl.comodoca.com
