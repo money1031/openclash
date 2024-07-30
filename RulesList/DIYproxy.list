@@ -6,6 +6,7 @@ DOMAIN-KEYWORD,ipcheck
 DOMAIN-KEYWORD,upai
 DOMAIN-KEYWORD,cloudflare
 DOMAIN-KEYWORD,qualified
+DOMAIN-KEYWORD,ganjingworld
 
 # 域名后缀匹配
 DOMAIN-SUFFIX,ipip.net
@@ -17,7 +18,7 @@ DOMAIN-SUFFIX,edns.ip-api.com
 # 全域名匹配
 DOMAIN,myip.ipip.net
 DOMAIN,one.one.one.one
-
+DOMAIN,www.ganjingworld.com
 
 # ip段匹配
 IP-CIDR,1.0.0.1/32
