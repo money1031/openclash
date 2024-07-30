@@ -13,12 +13,14 @@ DOMAIN-SUFFIX,ipip.net
 DOMAIN-SUFFIX,ipleak.net
 DOMAIN-SUFFIX,ipcheck.ing
 DOMAIN-SUFFIX,ipify.org
+DOMAIN-SUFFIX,openwrt.ai
 
 
 # 全域名匹配
 DOMAIN,myip.ipip.net
 DOMAIN,one.one.one.one
 DOMAIN,www.ganjingworld.com
+DOMAIN,dl.openwrt.ai
 
 # ip段匹配
 IP-CIDR,1.0.0.1/32
